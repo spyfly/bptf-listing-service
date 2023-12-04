@@ -6,7 +6,7 @@ export interface Config {
 }
 
 export interface DatabaseConfig {
-  type: string;
+  type: any;
   host: string;
   port: number;
   username: string;
