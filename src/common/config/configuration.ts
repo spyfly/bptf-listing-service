@@ -6,6 +6,7 @@ export interface Config {
 }
 
 export interface DatabaseConfig {
+  type: string;
   host: string;
   port: number;
   username: string;
@@ -37,11 +38,12 @@ export default (): Config => {
         ? 3000
         : parseInt(process.env.PORT, 10),
     database: {
-      host: process.env.POSTGRES_HOST,
-      port: parseInt(process.env.POSTGRES_PORT, 10),
-      username: process.env.POSTGRES_USERNAME,
-      password: process.env.POSTGRES_PASSWORD,
-      database: process.env.POSTGRES_DATABASE,
+      type: process.env.DB_TYPE,
+      host: process.env.DB_HOST,
+      port: parseInt(process.env.DB_PORT, 10),
+      username: process.env.DB_USERNAME,
+      password: process.env.DB_PASSWORD,
+      database: process.env.DB_DATABASE,
     },
     rabbitmq: {
       host: process.env.RABBITMQ_HOST,

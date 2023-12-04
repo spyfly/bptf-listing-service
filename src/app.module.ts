@@ -60,7 +60,7 @@ import { BullModule } from '@nestjs/bull';
         const databaseConfig = configService.get<DatabaseConfig>('database');
 
         return {
-          type: 'postgres',
+          type: databaseConfig.type,
           host: databaseConfig.host,
           port: databaseConfig.port,
           username: databaseConfig.username,
@@ -78,4 +78,4 @@ import { BullModule } from '@nestjs/bull';
     ListingModule,
   ],
 })
-export class AppModule {}
+export class AppModule { }
