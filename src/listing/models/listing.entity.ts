@@ -24,7 +24,7 @@ export class Listing {
   intent: ListingIntent;
 
   @Column({
-    type: 'jsonb',
+    type: 'json',
     select: false,
   })
   item: Item;
