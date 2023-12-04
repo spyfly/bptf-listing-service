@@ -4,7 +4,7 @@ const validation = Joi.object({
   NODE_ENV: Joi.string().valid('development', 'production', 'test').required(),
   PORT: Joi.number().default(3000),
   TYPEORM_SYNCRONIZE: Joi.boolean().default(false),
-  DB_TYPE: Joi.string().valid('mysql', 'postgres').default('postgres'),
+  DB_TYPE: Joi.string().valid('mariadb', 'postgres').default('postgres'),
   DB_HOST: Joi.string().required(),
   DB_PORT: Joi.number().required(),
   DB_USERNAME: Joi.string().required(),

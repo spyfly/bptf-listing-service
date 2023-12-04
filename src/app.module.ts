@@ -66,6 +66,7 @@ import { BullModule } from '@nestjs/bull';
           username: databaseConfig.username,
           password: databaseConfig.password,
           database: databaseConfig.database,
+          charset: 'utf8mb4',
           entities: [Listing],
           autoLoadModels: true,
           synchronize: process.env.TYPEORM_SYNCRONIZE === 'true',
